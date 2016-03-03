@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<process xmlns="http://drools.org/drools-5.0/process"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         xs:schemaLocation="http://drools.org/drools-5.0/process drools-processes-5.0.xsd"
+         type="RuleFlow" name="firstruleflow" id="org.jbpm.converter.firstruleflow" package-name="org.jbpm.converter" >
+
+  <header>
+  </header>
+
+  <nodes>
+    <start id="1" name="Start" x="100" y="100" width="48" height="48" />
+    <actionNode id="2" name="Script Node" x="244" y="103" width="102" height="48" >
+        <action type="expression" dialect="java" >System.out.println("Testing ruleflow");</action>
+      <metaData name="UniqueId">
+        <value>_jbpm-unique-8</value>
+      </metaData>
+    </actionNode>
+    <end id="3" name="End" x="412" y="104" width="48" height="48" />
+  </nodes>
+
+  <connections>
+    <connection from="1" to="2" />
+    <connection from="2" to="3" />
+  </connections>
+
+</process>
