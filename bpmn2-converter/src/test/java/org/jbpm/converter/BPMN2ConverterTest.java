@@ -33,13 +33,11 @@ public class BPMN2ConverterTest extends JbpmJUnitTestCase {
 	
 	@BeforeClass
 	public static void setupBefore() throws Exception {
-		//FileOutputStream out = new FileOutputStream("src/test/resources/org/jbpm/converter/firstruleflow.bpmn2");
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		BPMN2Converter.convertToBpmn2(BPMN2ConverterTest.class.getResourceAsStream("firstruleflow.rf"), out);
 		out.close();
 		firstruleflowBytes = out.toByteArray();
 		out.reset();
-		//out = new FileOutputStream("src/test/resources/org/jbpm/converter/secondruleflow.bpmn2");
 		BPMN2Converter.convertToBpmn2(BPMN2ConverterTest.class.getResourceAsStream("secondruleflow.rf"), out);
 		out.close();
 		secondruleflowBytes = out.toByteArray();
